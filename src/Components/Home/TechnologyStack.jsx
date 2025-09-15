@@ -7,7 +7,7 @@ const techCategories = [
     id: 'ui-cloud',
     sections: [
       {
-        title: 'UI Design',
+        title: 'Full Stack Development',
         technologies: [
           { name: 'HTML/HTML5', description: 'Markup language for structuring web content.', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg', gradient: 'from-orange-400 via-pink-500 to-red-500', link: '/technologies/html-css' },
           { name: 'CSS3', description: 'Stylesheet language for designing web pages.', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg', gradient: 'from-blue-400 via-blue-500 to-indigo-500', link: '/technologies/html-css' },
@@ -18,7 +18,7 @@ const techCategories = [
         ]
       },
       {
-        title: 'Server Side Scripting',
+        title: 'Data Science',
         technologies: [
           { name: 'PHP', description: 'Server-side scripting language for web development.', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg', gradient: 'from-indigo-400 via-indigo-500 to-purple-500', link: '/technologies/php' },
           { name: 'Java', description: 'Versatile programming language for many platforms.', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg', gradient: 'from-yellow-700 via-yellow-500 to-orange-400', link: '/technologies/java' },
@@ -213,7 +213,7 @@ const TechnologyStack = () => {
         <div className="mb-6 text-center md:mb-8">
           <h2 className="mb-3 bg-gradient-to-r from-white via-blue-100 to-cyan-200 bg-clip-text pt-2 text-2xl leading-tight font-extrabold tracking-tight text-transparent sm:text-3xl md:text-4xl lg:text-5xl animate-pulse" 
               style={{ fontFamily: 'Orbitron, Arial, sans-serif' }}>
-            TECHNOLOGY STACK
+            INTERNSHIP AND TRAINING PROGRAM
           </h2>
           <div className="mx-auto mb-4 h-1 w-20 rounded-full bg-gradient-to-r from-white to-cyan-300"></div>
           <p className="mx-auto max-w-2xl text-base font-light tracking-wide text-white/90 md:text-lg">

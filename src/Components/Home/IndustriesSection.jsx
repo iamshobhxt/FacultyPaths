@@ -1,15 +1,13 @@
 function IndustriesSection() {
   const industries = [
-    "Automotive",
-    "Ecommerce",
     "Education",
-    "Finance",
-    "Gaming",
-    "Healthcare",
-    "Manufacturing",
-    "Real Estate",
-    "Retail",
-    "Logistics",
+    "EdTech Companies",
+    "Ecommerce",
+    "IT Companies",
+    "Teachers",
+    "Students",
+    "AI-powered Solution",
+    "Colleges",
   ];
 
   return (
@@ -31,7 +29,7 @@ function IndustriesSection() {
         </div>
 
         {/* Industry Cards */}
-        <div className="grid grid-cols-2 justify-center gap-2 sm:grid-cols-3 md:grid-cols-4 md:gap-6 lg:grid-cols-5">
+        <div className="grid grid-cols-2 justify-center gap-2 sm:grid-cols-3 md:grid-cols-4 md:gap-6 lg:grid-cols-4">
           {industries.map((industry, index) => (
             <div
               key={index}

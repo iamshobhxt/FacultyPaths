@@ -1,79 +1,62 @@
-import { Users, Award, TrendingUp, Globe } from "lucide-react";
+
+// src/components/StatsSection.jsx
+import React, { useState, useEffect, useRef } from "react";
+import { Users, Target, TrendingUp, Globe } from "lucide-react";
+
+const stats = [
+  { icon: Users, value: 150, label: "Team Members" },
+  { icon: Target, value: 250, label: "Projects Completed" },
+  { icon: TrendingUp, value: 10, label: "Years in Business" },
+  { icon: Globe, value: 20, label: "Countries Served" },
+];
 
 function ReviewSection() {
-  const stats = [
-    {
-      icon: <Users className="h-8 w-8" />,
-      value: "100+",
-      label: "Happy Clients",
-      delay: "0ms",
-    },
-    {
-      icon: <Award className="h-8 w-8" />,
-      value: "250+",
-      label: "Projects Completed",
-      delay: "200ms",
-    },
-    {
-      icon: <TrendingUp className="h-8 w-8" />,
-      value: "98%",
-      label: "Success Rate",
-      delay: "400ms",
-    },
-    {
-      icon: <Globe className="h-8 w-8" />,
-      value: "20+",
-      label: "Countries Served",
-      delay: "600ms",
-    },
-  ];
+  const [visible, setVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => {
+        if (entries[0].isIntersecting) {
+          setVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.3 }
+    );
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <section
-      className="relative overflow-hidden pt-8 pb-20 text-white md:py-20"
+      ref={sectionRef}
+      className="relative overflow-hidden py-10 md:py-16"
       style={{
-        height: "300px",
-        background:
-          "linear-gradient(45deg, rgb(147, 88, 247), rgb(97, 151, 238), rgb(16, 215, 226))",
+        backgroundImage:
+          "linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 58, 138, 0.9) 50%, rgba(6, 182, 212, 0.85) 100%)",
+        backgroundSize: "cover",
+        backgroundPosition: "center center",
       }}
     >
-      {/* Floating circles */}
-      <div className="absolute inset-0 hidden opacity-10 md:block">
-        <div className="animate-float absolute top-10 left-10 h-32 w-32 rounded-full bg-white"></div>
-        <div
-          className="animate-float absolute right-10 bottom-10 h-24 w-24 rounded-full bg-white"
-          style={{ animationDelay: "2s" }}
-        ></div>
-        <div
-          className="animate-float absolute top-1/2 left-1/4 h-16 w-16 rounded-full bg-white"
-          style={{ animationDelay: "4s" }}
-        ></div>
-      </div>
+      {/* Floating background blobs */}
+      <div className="absolute inset-0 animate-pulse bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10"></div>
+      <div className="absolute top-10 left-10 h-32 w-32 animate-bounce rounded-full bg-blue-400/20 blur-3xl"></div>
+      <div className="absolute right-10 bottom-10 h-40 w-40 animate-bounce rounded-full bg-purple-400/20 blur-3xl"></div>
+      <div className="absolute top-1/2 left-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 transform animate-pulse rounded-full bg-cyan-400/20 blur-2xl"></div>
 
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-red-900/20"></div>
-
-      <div className="relative z-10 mx-auto h-full max-w-7xl px-2 sm:px-4 lg:px-8">
-        <div className="grid h-full grid-cols-2 items-center gap-4 md:grid-cols-4 md:gap-8">
-          {stats.map((stat, index) => (
-            <div
+      <div className="relative z-10 mx-auto max-w-7xl px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="grid w-full grid-cols-2 md:grid-cols-4">
+          {stats.map((item, index) => (
+            <StatCard
               key={index}
-              className="animate-fade-in group text-center"
-              style={{ animationDelay: stat.delay }}
-            >
-              {/* Icon wrapper */}
-              <div className="bg-opacity-20 group-hover:bg-opacity-30 animate-pulse-glow mx-auto mb-2 flex h-12 w-12 items-center justify-center rounded-full border border-white/30 bg-white text-black backdrop-blur-sm transition-all duration-300 group-hover:scale-110 md:mb-4 md:h-20 md:w-20">
-                {stat.icon}
-              </div>
-              {/* Number */}
-              <div className="mb-1 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-2xl font-bold text-transparent md:mb-2 md:text-4xl lg:text-5xl">
-                {stat.value}
-              </div>
-              {/* Label */}
-              <div className="text-xs font-medium opacity-90 md:text-sm lg:text-base">
-                {stat.label}
-              </div>
-            </div>
+              icon={item.icon}
+              value={item.value}
+              label={item.label}
+              run={visible}
+              borderLeft={index !== 0}
+              borderTop={index >= 2}
+            />
           ))}
         </div>
       </div>
@@ -81,6 +64,41 @@ function ReviewSection() {
   );
 }
 
+function StatCard({ icon: Icon, value, label, run, borderLeft, borderTop }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (run && count < value) {
+      const duration = 2000;
+      const step = Math.max(1, Math.floor(value / 100));
+      const timer = setInterval(() => {
+        setCount(prev => {
+          if (prev + step < value) return prev + step;
+          clearInterval(timer);
+          return value;
+        });
+      }, 15);
+      return () => clearInterval(timer);
+    }
+  }, [run]);
+
+  return (
+    <div
+      className={`flex flex-col items-center justify-center py-4 text-center md:py-0
+        ${borderLeft ? "md:border-l md:border-blue-300/30" : ""}
+        ${borderTop ? "border-t border-blue-300/30 md:border-t-0" : ""}
+      `}
+    >
+      <div className="mx-auto mb-2 flex h-10 w-10 sm:h-14 sm:w-14 md:h-16 md:w-16 transform items-center justify-center rounded-2xl border border-blue-400/20 bg-gradient-to-br from-slate-800 via-blue-600 to-cyan-500 shadow-2xl shadow-blue-500/30 transition-all duration-300 hover:-translate-y-1 hover:scale-110 hover:shadow-blue-500/50 sm:mb-4">
+        <Icon className="h-5 w-5 sm:h-8 sm:w-8 text-white drop-shadow-lg" />
+      </div>
+      <div className="mb-1 text-xl font-bold text-white drop-shadow-lg sm:mb-2 sm:text-2xl md:text-3xl">
+        {count}+
+      </div>
+      <div className="text-xs font-medium text-blue-100 sm:text-base">{label}</div>
+    </div>
+  );
+}
 
 export default ReviewSection
 

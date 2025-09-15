@@ -9,6 +9,10 @@ import Contact from './Components/Contact/Contact.jsx'
 import Login from './Components/Account/Login.jsx'
 import CreateAccount from './Components/Account/CreateAccount.jsx'
 import Courses from './Components/Courses/Courses.jsx'
+import AboutReview from './Components/About/AboutReview.jsx'
+import AboutHome from './Components/About/AboutHome.jsx'
+import AboutStory from './Components/About/AboutStory.jsx'
+import AboutInside from './Components/About/AboutInside.jsx'
 
 
 const router = createBrowserRouter(
@@ -17,9 +21,17 @@ const router = createBrowserRouter(
     
     <Route path='/' element={<Layout/>}>
       <Route path='' element ={<App/>} />
+      <Route path='about' element ={
+        <>
+        <AboutHome/> 
+        <AboutReview/>
+        <AboutStory/>
+        <AboutInside/>
+        </>
+    }/>
       <Route path='contact-us' element ={<Contact/>} />
     </Route> 
-      <Route path='contact' element ={<Login/>} />
+      <Route path='account' element ={<Login/>} />
       <Route path='careers' element ={<Courses/>} />
       <Route path='create-account' element ={<CreateAccount/>} />
 

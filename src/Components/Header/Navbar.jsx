@@ -135,7 +135,7 @@ export default function Navbar() {
           {/* Right side buttons */}
           <div className="flex items-center space-x-4">
             <a
-              href="/contact"
+              href="/account"
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               My Account

@@ -2,22 +2,22 @@ import React, { useState, useEffect } from 'react';
 
 // Client data
 const clientsData = [
-  { name: 'Ziffity', domain: 'ziffity.com' },
+  { name: 'Microsoft', domain: 'microsoft.com' },
   { name: 'Accenture', domain: 'accenture.com' },
-  { name: 'CleverTap', domain: 'clevertap.com' },
-  { name: 'Keka', domain: 'keka.com' },
-  { name: 'Fyle', domain: 'fylehq.com' },
-  { name: 'Codewave', domain: 'codewave.com' },
-  { name: 'Tvisha Technologies', domain: 'tvishatech.com' },
-  { name: 'Prompt Softech', domain: 'promptsoftech.com' },
-  { name: 'Chargebee', domain: 'chargebee.com' },
-  { name: 'Octal IT Solution', domain: 'octalsoftware.com' },
-  { name: 'Techuz', domain: 'techuz.com' },
-  { name: 'AasaanJobs', domain: 'aasaanjobs.com' },
-  { name: 'Happay', domain: 'happay.com' },
-  { name: 'AgroStar', domain: 'agrostar.in' },
+  { name: 'HCL TECH', domain: 'hcltech.com' },
   { name: 'Tech Mahindra', domain: 'techmahindra.com' },
-  { name: 'NowFloats', domain: 'nowfloats.com' }
+  { name: 'Prodesk IT', domain: 'prodesk.com' },
+  { name: 'Embrizon', domain: 'embrizon.com' },
+  { name: 'InternsForge', domain: 'internforge.in' },
+  { name: 'INTERNS TECH', domain: 'INTRNSTECH.com' },
+  { name: 'DigiTech Juction', domain: 'DIGITECHJUCTION.com' },
+  { name: 'Rama University', domain: 'ramauniversity.ac.in' },
+  { name: 'Signa', domain: 'Signa.com' },
+  { name: 'Maharishi University', domain: 'maharishi.com' },
+  { name: 'Microsoft', domain: 'microsoft.com' },
+  { name: 'Accenture', domain: 'accenture.com' },
+  { name: 'HCL TECH', domain: 'hcltech.com' },
+  { name: 'Tech Mahindra', domain: 'techmahindra.com' }, 
 ];
 
 // Individual Client Card Component
@@ -151,7 +151,7 @@ const SectionHeader = () => {
         className="text-xl sm:text-2xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-300 to-cyan-300 mb-2 md:mb-4 tracking-tight leading-tight relative z-10"
         style={{ fontFamily: 'Poppins, Arial, sans-serif' }}
       >
-        Our Clients
+        Our Collaboration
       </h2>
       <div className="w-12 md:w-32 h-1 bg-gradient-to-r from-purple-400 to-cyan-400 mx-auto mb-3 md:mb-8 rounded-full relative z-10"></div>
       <p className="text-xs md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed relative z-10">

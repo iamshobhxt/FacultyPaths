@@ -72,7 +72,6 @@ function HomeBackground() {
 function HomeButton() {
   return (
     <>
-    <ButtonSlim />
 
     <p className="max-w-xs text-base text-blue-100 transition-colors duration-300 sm:max-w-md md:max-w-2xl md:text-xl">
       We deliver innovative technology solutions to help your business thrive
@@ -81,9 +80,7 @@ function HomeButton() {
 
     <div className="flex flex-col gap-3 sm:flex-row md:gap-4">
       <ButtonCTA title='Get Started' href='about' icon={<Rocket />} />
-
-      
-      <ButtonCTA title='Watch Demo' href='about' icon={<Play />} />
+      <ButtonCTA title="Watch Demo" href="about#demo-video" icon={<Play />} />
     </div>
     </>
   );
@@ -116,30 +113,6 @@ function ButtonCTA({ title, href, icon }) {
   );
 }
 
-
-function ButtonSlim() {
-  return     <div className="flex flex-col gap-3  sm:flex-row sm:py-3 md:gap-4">
-      <a
-        className="inline-flex cursor-pointer items-center rounded-full bg-gradient-to-r from-blue-100 to-purple-100 px-3 py-1.5 text-xs font-medium text-blue-800 transition-transform hover:scale-105 md:px-4 md:py-2 md:text-sm"
-        href="/about"
-        >
-        <span className="mr-2 h-1.5 w-1.5 animate-pulse rounded-full bg-blue-600 md:h-2 md:w-2"></span>
-        Leading IT Services Provider
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="lucide lucide-chevron-down ml-2 h-3 w-3 animate-bounce md:h-4 md:w-4"
-          width="24" height="24" viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-        >
-          <path d="m6 9 6 6 6-6"></path>
-        </svg>
-      </a>
-    </div>
-}
 
 const features = [
   { icon: <Lightbulb />, title: "Innovation", desc: "Creative Solutions, Unified Systems" },

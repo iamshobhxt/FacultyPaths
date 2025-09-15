@@ -9,7 +9,11 @@ import {
   Users, 
   Brain, 
   Bug,
-  ArrowRight 
+  ArrowRight, 
+  Book,
+  User,
+  Cloud,
+  Code2
 } from 'lucide-react';
 
 // Background Triangle Component
@@ -25,8 +29,8 @@ const BackgroundTriangle = () => (
     >
       <defs>
         <linearGradient id="servicesTriangleGradient" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#3b82f6" />
-          <stop offset="100%" stopColor="#7dd3fc" />
+          <stop offset="0%" stopColor="white" />
+          <stop offset="100%" stopColor="white" />
         </linearGradient>
       </defs>
       <polygon 
@@ -177,65 +181,65 @@ const ServicesSection = () => {
   // Services data
   const services = [
     {
-      icon: Monitor,
-      title: "Software Products",
-      description: "Enterprise software including CRM, HR, and management systems.",
+      icon: Book,
+      title: "EDUCATIONAL INSTITUTIONS",
+      description: "Transform your institution with our comprehensive faculty solutions.",
       image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=200&fit=crop&crop=center",
       delay: 0,
       gradientColors: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Code,
-      title: "Web Design & Development",
-      description: "Custom websites, web applications, and specialized portal development.",
+      icon: Code2,
+      title: "ED-TECH COMPANIES",
+      description: "Accelerate your growth with our specialized business solutions.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=200&fit=crop&crop=center",
       delay: 100,
       gradientColors: "from-purple-500 to-pink-500"
     },
     {
-      icon: Smartphone,
-      title: "Mobile Applications",
-      description: "Native, hybrid, and cross-platform mobile app development solutions.",
+      icon: Code,
+      title: "IT COMPANIES",
+      description: "Streamline your talent acquisition through our strategic campus recruitment partnerships.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=200&fit=crop&crop=center",
       delay: 200,
       gradientColors: "from-green-500 to-teal-500"
     },
     {
       icon: TrendingUp,
-      title: "Online Marketing",
-      description: "Comprehensive digital marketing and social media marketing.",
+      title: "EDUCATORS",
+      description: "Monetize your expertise and expand your teaching impact on our innovative platform.",
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=200&fit=crop&crop=center",
       delay: 300,
       gradientColors: "from-orange-500 to-red-500"
     },
     {
       icon: Palette,
-      title: "Creative Design",
-      description: "UI/UX design, logo design, and creative brochure design services.",
+      title: "STUDENTS",
+      description: "Unlock your academic potential with personalized learning experiences tailored to your needs.",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=200&fit=crop&crop=center",
       delay: 400,
       gradientColors: "from-pink-500 to-rose-500"
     },
     {
-      icon: Users,
-      title: "Consulting Services",
-      description: "Expert consulting for NetSuite, recruitment, and software solutions.",
+      icon: Cloud,
+      title: "ECOMMERCE",
+      description: "Our eCommerce platform is designed to centralize and streamline service offerings.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop&crop=center",
       delay: 500,
       gradientColors: "from-indigo-500 to-purple-500"
     },
     {
       icon: Brain,
-      title: "Data Science",
-      description: "AI, machine learning, and advanced data analytics solutions.",
+      title: "AI-POWERED SOLUTION",
+      description: "Experience the future of education with our cutting-edge technology solutions.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop&crop=center",
       delay: 600,
       gradientColors: "from-emerald-500 to-teal-500"
     },
     {
-      icon: Bug,
-      title: "Testing Services",
-      description: "Comprehensive software, security, and performance testing solutions.",
+      icon: Users,
+      title: "COLLGES",
+      description: "An all-in-one platform that helps colleges showcase and manage through Faculty.",
       image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=200&fit=crop&crop=center",
       delay: 700,
       gradientColors: "from-purple-500 to-indigo-500"
