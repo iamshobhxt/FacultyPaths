@@ -92,7 +92,7 @@ function InsightCard({ post }) {
           </span>
           <span className="flex items-center text-xs text-gray-500 md:text-sm">
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="https://www.w3.org/2000/svg"
               className="lucide lucide-calendar mr-1 h-3 w-3 md:h-4 md:w-4"
               fill="none"
               stroke="currentColor"
@@ -134,7 +134,7 @@ function InsightCard({ post }) {
           >
             Read More
             <svg
-              xmlns="http://www.w3.org/2000/svg"
+              xmlns="https://www.w3.org/2000/svg"
               className="lucide lucide-arrow-right ml-1 h-3 w-3 md:h-4 md:w-4"
               fill="none"
               stroke="currentColor"
@@ -176,7 +176,7 @@ function InsightsSection() {
           height="100%"
           viewBox="0 0 1200 800"
           fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+          xmlns="https://www.w3.org/2000/svg"
           style={{ position: "absolute", left: 0, top: 0 }}
         >
           <defs>
@@ -230,7 +230,7 @@ function InsightsSection() {
                 <button className="flex items-center space-x-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-400 px-4 py-2 text-white shadow-md transition-all hover:scale-105">
                   <span>View All</span>
                   <svg
-                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns="https://www.w3.org/2000/svg"
                     width="20"
                     height="20"
                     fill="currentColor"

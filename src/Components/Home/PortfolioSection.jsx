@@ -137,7 +137,7 @@ const ViewAllServicesButton = () => (
     >
       <svg 
         className="mr-2 h-8 w-8 text-blue-500 transition-all duration-300 group-hover:rotate-45"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"

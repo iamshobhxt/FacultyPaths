@@ -13,6 +13,7 @@ import AboutReview from './Components/About/AboutReview.jsx'
 import AboutHome from './Components/About/AboutHome.jsx'
 import AboutStory from './Components/About/AboutStory.jsx'
 import AboutInside from './Components/About/AboutInside.jsx'
+import Footer from './Components/Footer/Footer.jsx'
 
 
 const router = createBrowserRouter(
@@ -32,7 +33,12 @@ const router = createBrowserRouter(
       <Route path='contact-us' element ={<Contact/>} />
     </Route> 
       <Route path='account' element ={<Login/>} />
-      <Route path='careers' element ={<Courses/>} />
+      <Route path='careers' element ={
+        <>
+        <Courses/>
+        <Footer/>
+        </>
+    }/>
       <Route path='create-account' element ={<CreateAccount/>} />
 
     </>                                                          

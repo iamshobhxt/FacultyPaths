@@ -50,7 +50,7 @@ const AboutInside = () => {
         className="pointer-events-none absolute top-0 left-0 z-10 h-full w-full"
         viewBox="0 0 1600 500"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
       >
         <defs>
           <linearGradient

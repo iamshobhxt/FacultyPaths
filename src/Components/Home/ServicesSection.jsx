@@ -199,7 +199,7 @@ const ServicesSection = () => {
     {
       icon: Code,
       title: "IT COMPANIES",
-      description: "Streamline your talent acquisition through our strategic campus recruitment partnerships.",
+      description: "Streamline your talent acquisition  campus recruitment partnerships.",
       image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=200&fit=crop&crop=center",
       delay: 200,
       gradientColors: "from-green-500 to-teal-500"
@@ -207,7 +207,7 @@ const ServicesSection = () => {
     {
       icon: TrendingUp,
       title: "EDUCATORS",
-      description: "Monetize your expertise and expand your teaching impact on our innovative platform.",
+      description: "Monetize your expertise  impact on our innovative platform.",
       image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=400&h=200&fit=crop&crop=center",
       delay: 300,
       gradientColors: "from-orange-500 to-red-500"
@@ -215,7 +215,7 @@ const ServicesSection = () => {
     {
       icon: Palette,
       title: "STUDENTS",
-      description: "Unlock your academic potential with personalized learning experiences tailored to your needs.",
+      description: "Unlock your academic potential with experiences tailored to your needs.",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=200&fit=crop&crop=center",
       delay: 400,
       gradientColors: "from-pink-500 to-rose-500"
@@ -223,7 +223,7 @@ const ServicesSection = () => {
     {
       icon: Cloud,
       title: "ECOMMERCE",
-      description: "Our eCommerce platform is designed to centralize and streamline service offerings.",
+      description: "Our eCommerce platform is designed and  service offerings.",
       image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=200&fit=crop&crop=center",
       delay: 500,
       gradientColors: "from-indigo-500 to-purple-500"
@@ -231,7 +231,7 @@ const ServicesSection = () => {
     {
       icon: Brain,
       title: "AI-POWERED SOLUTION",
-      description: "Experience the future of education with our cutting-edge technology solutions.",
+      description: "Experience the future  with our cutting-edge technology solutions.",
       image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop&crop=center",
       delay: 600,
       gradientColors: "from-emerald-500 to-teal-500"
@@ -239,7 +239,7 @@ const ServicesSection = () => {
     {
       icon: Users,
       title: "COLLGES",
-      description: "An all-in-one platform that helps colleges showcase and manage through Faculty.",
+      description: "An all-in-one platform that helps  manage through Faculty.",
       image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=200&fit=crop&crop=center",
       delay: 700,
       gradientColors: "from-purple-500 to-indigo-500"

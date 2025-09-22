@@ -171,7 +171,7 @@ function ScrollDownIcon() {
       className="mt-8 flex justify-center md:absolute md:-bottom-16 md:left-1/2 md:mt-0 md:-translate-x-1/2 md:transform md:animate-bounce cursor-pointer"
     >
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        xmlns="https://www.w3.org/2000/svg"
         className="lucide lucide-chevron-down h-6 w-6 text-gray-400 transition-colors hover:text-blue-600 md:h-8 md:w-8"
         fill="none"
         stroke="currentColor"

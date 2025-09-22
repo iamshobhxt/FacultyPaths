@@ -140,30 +140,21 @@ const Courses = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      {/* Header */}
-      <div className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
-            <h1 className="text-3xl font-bold text-gray-900">EduPlatform</h1>
-            <div className="flex items-center space-x-4">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5">
+        <div className="flex items-center space-x-4">
               <div className="relative">
-                <ShoppingCart className="h-6 w-6 text-gray-600" />
+                <ShoppingCart className="h-6 w-6 text-black" />
                 {cart.length > 0 && (
                   <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                     {cart.length}
                   </span>
                 )}
               </div>
-              <span className="text-sm font-medium text-gray-700">
+              <span className="text-sm font-medium text-black">
                 Cart: ${getTotalPrice()}
               </span>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Learn Skills That Matter
