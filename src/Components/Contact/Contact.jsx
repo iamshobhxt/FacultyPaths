@@ -52,11 +52,29 @@ const ContactForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully! We\'ll get back to you within 24 hours.');
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+    const res = await fetch("http://localhost:5000/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert("✅ Message sent successfully!");
+      handleReset();
+    } else {
+      alert("❌ Failed to send message: " + data.error);
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    alert("⚠️ Something went wrong. Try again later.");
+  }
+};
 
   const handleReset = () => {
     setFormData({
