@@ -33,7 +33,7 @@ const navItems = [
       { name: "Education", href: "/industries/education" },
     ],
   },
-  { name: "Portfolio", href: "/portfolio" },
+  // { name: "Portfolio", href: "/portfolio" },
   { name: "Courses", href: "/courses" },
   { name: "Contact Us", href: "/contact-us" },
 ];
