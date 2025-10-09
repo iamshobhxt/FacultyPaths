@@ -34,7 +34,7 @@ const navItems = [
     ],
   },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Careers", href: "/careers" },
+  { name: "Courses", href: "/courses" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 

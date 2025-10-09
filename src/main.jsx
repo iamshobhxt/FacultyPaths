@@ -31,16 +31,10 @@ const router = createBrowserRouter(
         </>
     }/>
       <Route path='contact-us' element ={<Contact/>} />
+      <Route path='courses' element ={<Courses/>}/>
     </Route> 
       <Route path='account' element ={<Login/>} />
-      <Route path='careers' element ={
-        <>
-        <Courses/>
-        <Footer/>
-        </>
-    }/>
       <Route path='create-account' element ={<CreateAccount/>} />
-
     </>                                                          
   )
 )
