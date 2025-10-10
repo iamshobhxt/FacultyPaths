@@ -134,7 +134,7 @@ function ContactSection() {
             <div className="space-y-4 md:space-y-6">
               <ContactInfo
                 icon={Phone}
-                title="Call Us"
+                title="Contact Us"
                 detail="+91 9336592235"
               />
               <ContactInfo

@@ -90,11 +90,7 @@ const AboutInside = () => {
               A Glimpse into Our Vision, Values, and Innovation
             </p>
             <p className="mb-8 text-left text-base leading-relaxed text-white">
-              Step into our world through this short video that captures what
-              FACULTY stands for — our journey, mission, and the passionate minds
-              behind our solutions. Discover how we craft intelligent,
-              human-centered technologies that empower businesses and shape the
-              future.
+              Experience our world through this brief video, highlighting what FACULTY represents — our journey, our mission, and the dedicated minds behind our innovations. Discover how we develop intelligent, human-centered solutions that empower institutions, enhance learning, and shape the future of education.
             </p>
             <div
               className="mb-8 h-1 w-20 rounded-full"

@@ -1,6 +1,7 @@
 // Navbar.jsx
 import React, { useState, useRef, useEffect } from "react";
 import { ChevronDown, Search, Menu, X } from "lucide-react";
+import { href } from "react-router";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -8,31 +9,24 @@ const navItems = [
   {
     name: "Services",
     dropdown: [
-      { name: "Web Development", href: "/services/web-development" },
-      { name: "Mobile Apps", href: "/services/mobile-apps" },
-      { name: "Cloud Services", href: "/services/cloud" },
-      { name: "Consulting", href: "/services/consulting" },
+      { name: "Web Development" },
+      { name: "Mobile Apps" },
+      { name: "Cloud Services" },
+      { name: "Consulting" },
     ],
   },
   {
     name: "Technologies",
     dropdown: [
-      { name: "React", href: "/technologies/react" },
-      { name: "Node.js", href: "/technologies/nodejs" },
-      { name: "Python", href: "/technologies/python" },
-      { name: "AWS", href: "/technologies/aws" },
-      { name: "Azure", href: "/technologies/azure" },
+      { name: "React" },
+      { name: "Node.js" },
+      { name: "Python" },
+      { name: "AWS" },
+      { name: "Azure" },
     ],
   },
   {
-    name: "Industries",
-    dropdown: [
-      { name: "Healthcare", href: "/industries/healthcare" },
-      { name: "Finance", href: "/industries/finance" },
-      { name: "E-commerce", href: "/industries/ecommerce" },
-      { name: "Education", href: "/industries/education" },
-    ],
-  },
+    name: "Sessions",href :"/session"},
   // { name: "Portfolio", href: "/portfolio" },
   { name: "Courses", href: "/courses" },
   { name: "Contact Us", href: "/contact-us" },
@@ -141,9 +135,9 @@ export default function Navbar() {
               My Account
             </a>
 
-            <button className="hidden md:block text-black hover:text-black transition-colors duration-200" aria-label="search">
+            {/* <button className="hidden md:block text-black hover:text-black transition-colors duration-200" aria-label="search">
               <Search className="h-5 w-5" />
-            </button>
+            </button> */}
 
             {/* Mobile menu button */}
             <button className="lg:hidden text-black hover:text-black" onClick={() => { setIsMenuOpen((v) => !v); setActiveDropdown(null); }}>
@@ -206,12 +200,12 @@ export default function Navbar() {
                 );
               })}
 
-              <div className="pt-2 mt-2 border-t border-slate-200">
+              {/* <div className="pt-2 mt-2 border-t border-slate-200">
                 <button className="w-full text-left px-3 py-2 text-base font-medium text-gray-700 hover:text-white hover:bg-slate-700 rounded-md transition-colors duration-200">
                   <Search className="inline h-5 w-5 mr-2" />
                   Search
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
         )}

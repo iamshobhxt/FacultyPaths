@@ -4,14 +4,15 @@ import { Star, Clock, Users, CheckCircle, ShoppingCart, Play } from 'lucide-reac
 const Courses = () => {
   const [selectedCourse, setSelectedCourse] = useState(null);
   const [cart, setCart] = useState([]);
+  const [notifications, setNotifications] = useState([]);
 
   const courses = [
     {
       id: 1,
       title: "Complete Web Development Bootcamp",
       instructor: "Sarah Johnson",
-      price: 149.99,
-      originalPrice: 299.99,
+      price: 1999.99,
+      originalPrice: 3899.99,
       rating: 4.8,
       students: 12543,
       duration: "42 hours",
@@ -37,8 +38,8 @@ const Courses = () => {
       id: 2,
       title: "Python for Data Science",
       instructor: "Dr. Michael Chen",
-      price: 89.99,
-      originalPrice: 179.99,
+      price: 2999.99,
+      originalPrice: 4999.99,
       rating: 4.9,
       students: 8234,
       duration: "28 hours",
@@ -64,8 +65,8 @@ const Courses = () => {
       id: 3,
       title: "Digital Marketing Mastery",
       instructor: "Emma Rodriguez",
-      price: 119.99,
-      originalPrice: 249.99,
+      price: 499.99,
+      originalPrice: 999.99,
       rating: 4.7,
       students: 15678,
       duration: "35 hours",
@@ -91,8 +92,8 @@ const Courses = () => {
       id: 4,
       title: "UI/UX Design Fundamentals",
       instructor: "Alex Thompson",
-      price: 99.99,
-      originalPrice: 199.99,
+      price: 499.99,
+      originalPrice: 999.99,
       rating: 4.8,
       students: 6789,
       duration: "32 hours",
@@ -138,23 +139,42 @@ const Courses = () => {
     setSelectedCourse(null);
   };
 
+  // Notification function
+  const showNotification = (message) => {
+    const id = Date.now();
+    setNotifications(prev => [...prev, { id, message }]);
+    setTimeout(() => {
+      setNotifications(prev => prev.filter(n => n.id !== id));
+    }, 3000); // 3 seconds
+  };
+
   return (
     <div className="min-h-screen my-12 bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      
+      {/* Notifications */}
+      <div className="fixed top-6 right-6 space-y-3 z-[9999]">
+        {notifications.map(n => (
+          <div key={n.id} className="bg-green-600 text-white px-4 py-3 rounded-xl shadow-lg">
+            {n.message}
+          </div>
+        ))}
+      </div>
+
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5">
         <div className="flex items-center space-x-4">
-              <div className="relative">
-                <ShoppingCart className="h-6 w-6 text-black" />
-                {cart.length > 0 && (
-                  <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                    {cart.length}
-                  </span>
-                )}
-              </div>
-              <span className="text-sm font-medium text-black">
-                Cart: ${getTotalPrice()}
+          <div className="relative">
+            <ShoppingCart className="h-6 w-6 text-black" />
+            {cart.length > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                {cart.length}
               </span>
-            </div>
+            )}
+          </div>
+          <span className="text-sm font-medium text-black">
+            Cart: ₹{getTotalPrice()}
+          </span>
+        </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Learn Skills That Matter
@@ -244,10 +264,10 @@ const Courses = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className="flex items-center space-x-2">
                     <span className="text-2xl font-bold text-gray-900">
-                      ${course.price}
+                      ₹{course.price}
                     </span>
                     <span className="text-lg text-gray-500 line-through">
-                      ${course.originalPrice}
+                      ₹{course.originalPrice}
                     </span>
                   </div>
                 </div>
@@ -289,7 +309,7 @@ const Courses = () => {
                   {course.title}
                 </span>
                 <div className="flex items-center space-x-2">
-                  <span className="font-semibold">${course.price}</span>
+                  <span className="font-semibold">₹{course.price}</span>
                   <button
                     onClick={() => removeFromCart(course.id)}
                     className="text-red-500 hover:text-red-700 text-sm"
@@ -302,9 +322,15 @@ const Courses = () => {
           </div>
           <div className="border-t pt-4">
             <div className="flex justify-between items-center mb-4">
-              <span className="font-bold text-lg">Total: ${getTotalPrice()}</span>
+              <span className="font-bold text-lg">Total: ₹{getTotalPrice()}</span>
             </div>
-            <button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors duration-200">
+            <button
+              onClick={() => {
+                cart.forEach(course => showNotification(`🎉 You purchased ${course.title}!`));
+                setCart([]);
+              }}
+              className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors duration-200"
+            >
               Checkout
             </button>
           </div>
@@ -376,10 +402,10 @@ const Courses = () => {
                     <div className="flex items-center justify-between mb-4">
                       <div>
                         <span className="text-3xl font-bold text-gray-900">
-                          ${selectedCourse.price}
+                          ₹{selectedCourse.price}
                         </span>
                         <span className="text-xl text-gray-500 line-through ml-3">
-                          ${selectedCourse.originalPrice}
+                          ₹{selectedCourse.originalPrice}
                         </span>
                       </div>
                       <div className="flex items-center">
@@ -423,8 +449,10 @@ const Courses = () => {
           </div>
         </div>
       )}
+
     </div>
   );
 };
 
 export default Courses;
+

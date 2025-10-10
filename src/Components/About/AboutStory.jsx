@@ -36,13 +36,13 @@ const StoryCard = () => {
 
         <div className="space-y-4 text-justify text-base leading-relaxed text-blue-100 md:text-lg">
           <p>
-           FacultyPaths revolutionizes India's educational landscape by connecting institutions with quality faculty, empowering educators to monetize their expertise, and providing students with personalized learning experiences. We are India's comprehensive educational marketplace with innovative solutions designed to bridge the gap between academic excellence and career success through seamless connections and transparent performance tracking.
+           FacultyPaths is revolutionizing India’s education landscape by seamlessly connecting institutions with top-quality faculty, empowering educators to transform their expertise into opportunities, and providing students with truly personalized learning experiences. As India’s most comprehensive educational marketplace, we bridge the gap between academic excellence and career success with innovative solutions, transparent performance tracking, and meaningful connections that elevate learning for everyone.
           </p>
           <p>
-            FacultyPaths is transforming India’s educational ecosystem by linking institutions with top-quality faculty, enabling educators to monetize their expertise, and offering students personalized learning experiences. It serves as a comprehensive educational marketplace, bridging academic excellence and career success through seamless connections and transparent performance tracking.
+           Transforming India’s educational ecosystem, we connect institutions with top-quality faculty, empower educators to monetize their expertise, and provide students with personalized, impactful learning experiences. As a comprehensive educational marketplace, we bridge the gap between academic excellence and career success through seamless connections and transparent performance tracking.
           </p>
           <p>
-           FacultyPaths is revolutionizing India’s education system by seamlessly connecting institutions with skilled faculty, empowering educators to monetize their expertise, and delivering personalized learning experiences to students. As a comprehensive educational marketplace, FacultyPaths bridges the gap between academic excellence and career success. With innovative solutions, it ensures transparent performance tracking, fosters collaboration, and drives quality education through accessible, industry-aligned opportunities for both educators and learners.
+           Reimagining India’s education landscape, we connect institutions with exceptional faculty, empower educators to transform their expertise into opportunities, and provide students with personalized, impactful learning experiences. As a comprehensive educational marketplace, we bridge the gap between academic excellence and career success. With innovative solutions, we enable transparent performance tracking, foster meaningful collaboration, and create accessible, industry-aligned pathways that elevate learning for both educators and students.
           </p>
         </div>
       </div>
