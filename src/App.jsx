@@ -21,7 +21,6 @@ function App() {
      <ReviewSection/>
      <InsightsSection/>
      <ContactSection/>
-
     </>
   )
 }

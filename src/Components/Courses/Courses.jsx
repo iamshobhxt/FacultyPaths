@@ -10,11 +10,11 @@ const Courses = () => {
     {
       id: 1,
       title: "Complete Web Development Bootcamp",
-      instructor: "Sarah Johnson",
+      instructor: "Aryan Sharma",
       price: 1999.99,
       originalPrice: 3899.99,
       rating: 4.8,
-      students: 12543,
+      students: 1000,
       duration: "42 hours",
       level: "Beginner to Advanced",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
@@ -37,11 +37,11 @@ const Courses = () => {
     {
       id: 2,
       title: "Python for Data Science",
-      instructor: "Dr. Michael Chen",
+      instructor: "Aryan Sharma",
       price: 2999.99,
       originalPrice: 4999.99,
       rating: 4.9,
-      students: 8234,
+      students:350,
       duration: "28 hours",
       level: "Intermediate",
       image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop",
@@ -64,11 +64,11 @@ const Courses = () => {
     {
       id: 3,
       title: "Digital Marketing Mastery",
-      instructor: "Emma Rodriguez",
+      instructor: "Yash Dixit",
       price: 499.99,
       originalPrice: 999.99,
       rating: 4.7,
-      students: 15678,
+      students: 300,
       duration: "35 hours",
       level: "All Levels",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
@@ -91,11 +91,11 @@ const Courses = () => {
     {
       id: 4,
       title: "UI/UX Design Fundamentals",
-      instructor: "Alex Thompson",
+      instructor: "Yash Dixit",
       price: 499.99,
       originalPrice: 999.99,
       rating: 4.8,
-      students: 6789,
+      students:500,
       duration: "32 hours",
       level: "Beginner",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
@@ -161,7 +161,7 @@ const Courses = () => {
       </div>
 
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-5">
+      <div className="bg-gradient-to-r  from-purple-600 to-blue-600 text-white py-5">
         <div className="flex items-center space-x-4">
           <div className="relative">
             <ShoppingCart className="h-6 w-6 text-black" />
@@ -185,7 +185,7 @@ const Courses = () => {
           <div className="flex justify-center space-x-8 text-sm md:text-base">
             <div className="flex items-center">
               <Users className="h-5 w-5 mr-2" />
-              50,000+ Students
+              1500+ Students
             </div>
             <div className="flex items-center">
               <Star className="h-5 w-5 mr-2" />
