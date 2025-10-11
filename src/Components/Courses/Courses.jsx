@@ -10,12 +10,11 @@ const Courses = () => {
     {
       id: 1,
       title: "Complete Web Development Bootcamp",
-      instructor: "Aryan Sharma",
       price: 1999.99,
       originalPrice: 3899.99,
       rating: 4.8,
       students: 1000,
-      duration: "42 hours",
+      duration: "3 Months",
       level: "Beginner to Advanced",
       image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
       description: "Master modern web development with HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build 5 real-world projects.",
@@ -37,12 +36,11 @@ const Courses = () => {
     {
       id: 2,
       title: "Python for Data Science",
-      instructor: "Aryan Sharma",
       price: 2999.99,
       originalPrice: 4999.99,
       rating: 4.9,
       students:350,
-      duration: "28 hours",
+      duration: "25 Days",
       level: "Intermediate",
       image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop",
       description: "Learn Python programming for data analysis, visualization, and machine learning. Perfect for aspiring data scientists.",
@@ -64,12 +62,11 @@ const Courses = () => {
     {
       id: 3,
       title: "Digital Marketing Mastery",
-      instructor: "Yash Dixit",
       price: 499.99,
       originalPrice: 999.99,
       rating: 4.7,
       students: 300,
-      duration: "35 hours",
+      duration: "25 Days",
       level: "All Levels",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop",
       description: "Complete digital marketing course covering SEO, social media, email marketing, PPC, and analytics.",
@@ -91,12 +88,11 @@ const Courses = () => {
     {
       id: 4,
       title: "UI/UX Design Fundamentals",
-      instructor: "Yash Dixit",
       price: 499.99,
       originalPrice: 999.99,
       rating: 4.8,
       students:500,
-      duration: "32 hours",
+      duration: "10 Days",
       level: "Beginner",
       image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop",
       description: "Learn user interface and user experience design principles. Create stunning, user-friendly designs.",
@@ -245,10 +241,10 @@ const Courses = () => {
                 <h4 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
                   {course.title}
                 </h4>
-
+{/* 
                 <p className="text-gray-600 text-sm mb-3">
-                  by {course.instructor}
-                </p>
+                  {course.instructor}
+                </p> */}
 
                 <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
                   <div className="flex items-center">

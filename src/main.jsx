@@ -13,7 +13,7 @@ import AboutReview from './Components/About/AboutReview.jsx'
 import AboutHome from './Components/About/AboutHome.jsx'
 import AboutStory from './Components/About/AboutStory.jsx'
 import AboutInside from './Components/About/AboutInside.jsx'
-import Footer from './Components/Footer/Footer.jsx'
+import Session from './Components/Session/Session.jsx'
 
 
 const router = createBrowserRouter(
@@ -31,6 +31,7 @@ const router = createBrowserRouter(
         </>
     }/>
       <Route path='contact-us' element ={<Contact/>} />
+      <Route path='session' element ={<Session/>} />
       <Route path='courses' element ={<Courses/>}/>
     </Route> 
       <Route path='account' element ={<Login/>} />
