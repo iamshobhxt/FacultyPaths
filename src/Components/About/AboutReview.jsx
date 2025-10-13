@@ -4,10 +4,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Users, Target, TrendingUp, Globe } from "lucide-react";
 
 const stats = [
-  { icon: Users, value: 150, label: "Team Members" },
-  { icon: Target, value: 250, label: "Projects Completed" },
-  { icon: TrendingUp, value: 10, label: "Years in Business" },
-  { icon: Globe, value: 20, label: "Countries Served" },
+  { icon: Users, value: 30, label: "Team Members" },
+  { icon: Target, value: 15, label: "Projects Completed" },
+  { icon: TrendingUp, value: 3, label: "Years in Business" },
+  { icon: Globe, value: 5, label: "Countries Served" },
 ];
 
 function AboutReview() {

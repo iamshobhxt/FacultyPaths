@@ -1,9 +1,29 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 const AboutInside = () => {
   const sectionRef = useRef(null);
+  const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const location = useLocation();
+  const headerOffset = 80; 
 
+  // ✅ Scroll into view if URL has #demo-video
+  useEffect(() => {
+    if (location.hash === "#demo-video" && sectionRef.current) {
+      setTimeout(() => {
+        const elementPosition = sectionRef.current.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: "smooth",
+        });
+      }, 400);
+    }
+  }, [location]);
+
+  // ✅ IntersectionObserver for animation only (no autoplay)
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -14,13 +34,10 @@ const AboutInside = () => {
           }
         });
       },
-      { threshold: 0.2 }
+      { threshold: 0.5 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
+    if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
   }, []);
 
@@ -50,7 +67,7 @@ const AboutInside = () => {
         className="pointer-events-none absolute top-0 left-0 z-10 h-full w-full"
         viewBox="0 0 1600 500"
         fill="none"
-        xmlns="https://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
       >
         <defs>
           <linearGradient
@@ -81,7 +98,7 @@ const AboutInside = () => {
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          {/* Left Text Content */}
+          {/* Left Text */}
           <div className="flex w-full flex-col items-start rounded-2xl border border-[#2a2b38] bg-[#2a2b38] p-8 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl lg:w-1/2">
             <h2 className="mb-4 text-left text-4xl font-bold text-white md:text-5xl lg:text-6xl">
               Inside FACULTYPATHS
@@ -90,7 +107,11 @@ const AboutInside = () => {
               A Glimpse into Our Vision, Values, and Innovation
             </p>
             <p className="mb-8 text-left text-base leading-relaxed text-white">
-              Experience our world through this brief video, highlighting what FACULTY represents — our journey, our mission, and the dedicated minds behind our innovations. Discover how we develop intelligent, human-centered solutions that empower institutions, enhance learning, and shape the future of education.
+              Experience our world through this brief video, highlighting what
+              FACULTY represents — our journey, our mission, and the dedicated
+              minds behind our innovations. Discover how we develop
+              intelligent, human-centered solutions that empower institutions,
+              enhance learning, and shape the future of education.
             </p>
             <div
               className="mb-8 h-1 w-20 rounded-full"
@@ -101,9 +122,10 @@ const AboutInside = () => {
             ></div>
           </div>
 
-          {/* Right Video Block */}
+          {/* Right Video */}
           <div className="flex w-full justify-center rounded-2xl border border-[#232433] bg-[#232433] p-8 shadow-lg lg:w-1/2">
             <video
+              ref={videoRef}
               src="/images/demovideo.mp4"
               poster="/portfoliobg.jpg"
               controls
