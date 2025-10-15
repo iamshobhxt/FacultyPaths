@@ -30,7 +30,7 @@ const Courses = () => {
         "Supporting Data",
         "The Opportunity"
       ],
-      pdf: "/management-placement.pdf"
+      pdf: "/technical-placement.pdf"
     },
     {
       id: 2,
@@ -56,7 +56,7 @@ const Courses = () => {
         "Placement Preparation",
         "Real-world Projects"
       ],
-      pdf: "/technical-placement.pdf"
+      pdf: "/management-placement.pdf"
     },
     {
       id: 3,
@@ -357,3 +357,4 @@ const Courses = () => {
 };
 
 export default Courses;
+
