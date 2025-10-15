@@ -28,7 +28,7 @@ const navItems = [
   {
     name: "Sessions",href :"/session"},
   // { name: "Portfolio", href: "/portfolio" },
-  { name: "Courses", href: "/courses" },
+  { name: "Learnig Hub", href: "/learning-hub" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 

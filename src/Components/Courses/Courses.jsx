@@ -9,17 +9,16 @@ const Courses = () => {
   const courses = [
     {
       id: 1,
-      title: "Complete Web Development Bootcamp",
-      price: 1999.99,
-      originalPrice: 3899.99,
-      rating: 4.8,
-      students: 1000,
-      duration: "3 Months",
+      title: "Technical Placement Catalyst",
+      price: 2499,
+      originalPrice: 4999,
+      rating: 4.5,
+      students: 150,
+      duration: "100 Hours",
       level: "Beginner to Advanced",
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&h=300&fit=crop",
+      image: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&h=200&fit=crop&crop=center",
       description: "Master modern web development with HTML, CSS, JavaScript, React, Node.js, and MongoDB. Build 5 real-world projects.",
       features: [
-        "42 hours of video content",
         "5 hands-on projects",
         "Certificate of completion",
         "Lifetime access",
@@ -31,33 +30,34 @@ const Courses = () => {
         "React & Redux",
         "Node.js & Express",
         "MongoDB & Database Design"
-      ]
+      ],
+      pdf: "/management-placement.pdf"
     },
     {
       id: 2,
-      title: "Python for Data Science",
-      price: 2999.99,
-      originalPrice: 4999.99,
-      rating: 4.9,
+      title: "Management Placement Catalyst",
+      price: 2499,
+      originalPrice: 4999,
+      rating: 4.6,
       students:350,
-      duration: "25 Days",
-      level: "Intermediate",
-      image: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=400&h=300&fit=crop",
-      description: "Learn Python programming for data analysis, visualization, and machine learning. Perfect for aspiring data scientists.",
+      duration: "100 Hours",
+      level: "Beginner to Advanced",
+      image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=200&fit=crop&crop=center",
+      description: "The management placement catalyst program is a tranformative 25-days , 100-hours training roadmap meticulously design for management students. ",
       features: [
-        "28 hours of content",
-        "Real datasets included",
-        "Jupyter notebooks",
-        "Career guidance",
-        "Industry projects"
+        "Certificate of completion",
+        "Lifetime access",
+        "24/7 community support",
+        "Career guidance"
       ],
       curriculum: [
-        "Python Fundamentals",
-        "Pandas & NumPy",
-        "Data Visualization",
-        "Machine Learning Basics",
+        "Comprehensive Curriculum",
+        "Industry Alignment",
+        "Hands oh Learning",
+        "Placement Preparation",
         "Real-world Projects"
-      ]
+      ],
+      pdf: "/technical-placement.pdf"
     },
     {
       id: 3,
@@ -83,7 +83,8 @@ const Courses = () => {
         "Email Marketing",
         "Google Ads & PPC",
         "Analytics & Reporting"
-      ]
+      ],
+      pdf: "/digital-marketing.pdf"
     },
     {
       id: 4,
@@ -109,56 +110,20 @@ const Courses = () => {
         "Wireframing & Prototyping",
         "Visual Design",
         "Usability Testing"
-      ]
+      ],
+      pdf: "/ui-ux-design.pdf"
     }
   ];
 
-  const addToCart = (course) => {
-    if (!cart.find(item => item.id === course.id)) {
-      setCart([...cart, course]);
-    }
-  };
-
-  const removeFromCart = (courseId) => {
-    setCart(cart.filter(item => item.id !== courseId));
-  };
-
-  const getTotalPrice = () => {
-    return cart.reduce((total, course) => total + course.price, 0).toFixed(2);
-  };
-
-  const openModal = (course) => {
-    setSelectedCourse(course);
-  };
-
-  const closeModal = () => {
-    setSelectedCourse(null);
-  };
-
-  // Notification function
-  const showNotification = (message) => {
-    const id = Date.now();
-    setNotifications(prev => [...prev, { id, message }]);
-    setTimeout(() => {
-      setNotifications(prev => prev.filter(n => n.id !== id));
-    }, 3000); // 3 seconds
-  };
+  const openModal = (course) => setSelectedCourse(course);
+  const closeModal = () => setSelectedCourse(null);
 
   return (
     <div className="min-h-screen my-12 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      
-      {/* Notifications */}
-      <div className="fixed top-6 right-6 space-y-3 z-[9999]">
-        {notifications.map(n => (
-          <div key={n.id} className="bg-green-600 text-white px-4 py-3 rounded-xl shadow-lg">
-            {n.message}
-          </div>
-        ))}
-      </div>
 
       {/* Hero Section */}
       <div className="bg-gradient-to-r  from-purple-600 to-blue-600 text-white py-5">
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           <div className="relative">
             <ShoppingCart className="h-6 w-6 text-black" />
             {cart.length > 0 && (
@@ -168,9 +133,9 @@ const Courses = () => {
             )}
           </div>
           <span className="text-sm font-medium text-black">
-            Cart: ₹{getTotalPrice()}
+            Cart: ₹{cart.reduce((total, course) => total + course.price, 0).toFixed(2)}
           </span>
-        </div>
+        </div> */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Learn Skills That Matter
@@ -241,10 +206,6 @@ const Courses = () => {
                 <h4 className="text-xl font-bold text-gray-900 mb-2 line-clamp-2">
                   {course.title}
                 </h4>
-{/* 
-                <p className="text-gray-600 text-sm mb-3">
-                  {course.instructor}
-                </p> */}
 
                 <div className="flex items-center text-sm text-gray-500 mb-4 space-x-4">
                   <div className="flex items-center">
@@ -269,18 +230,14 @@ const Courses = () => {
                 </div>
 
                 <div className="space-y-2">
+                  {/* ✅ PDF Button per course */}
                   <button
-                    onClick={() => addToCart(course)}
-                    disabled={cart.find(item => item.id === course.id)}
-                    className={`w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 ${
-                      cart.find(item => item.id === course.id)
-                        ? 'bg-green-100 text-green-700 cursor-not-allowed'
-                        : 'bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg'
-                    }`}
+                    onClick={() => window.open(course.pdf, "_blank")}
+                    className="w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg"
                   >
-                    {cart.find(item => item.id === course.id) ? 'Added to Cart' : 'Add to Cart'}
+                    Roadmap Here
                   </button>
-                  
+
                   <button
                     onClick={() => openModal(course)}
                     className="w-full py-2 px-4 border border-gray-300 rounded-xl text-gray-700 hover:bg-gray-50 transition-colors duration-200"
@@ -293,45 +250,6 @@ const Courses = () => {
           ))}
         </div>
       </div>
-
-      {/* Cart Summary */}
-      {cart.length > 0 && (
-        <div className="fixed bottom-6 right-6 bg-white rounded-2xl shadow-2xl p-6 max-w-sm border">
-          <h4 className="text-lg font-bold text-gray-900 mb-4">Cart Summary</h4>
-          <div className="space-y-3 mb-4">
-            {cart.map((course) => (
-              <div key={course.id} className="flex justify-between items-center">
-                <span className="text-sm text-gray-700 truncate mr-2">
-                  {course.title}
-                </span>
-                <div className="flex items-center space-x-2">
-                  <span className="font-semibold">₹{course.price}</span>
-                  <button
-                    onClick={() => removeFromCart(course.id)}
-                    className="text-red-500 hover:text-red-700 text-sm"
-                  >
-                    Remove
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="border-t pt-4">
-            <div className="flex justify-between items-center mb-4">
-              <span className="font-bold text-lg">Total: ₹{getTotalPrice()}</span>
-            </div>
-            <button
-              onClick={() => {
-                cart.forEach(course => showNotification(`🎉 You purchased ${course.title}!`));
-                setCart([]);
-              }}
-              className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-xl font-semibold transition-colors duration-200"
-            >
-              Checkout
-            </button>
-          </div>
-        </div>
-      )}
 
       {/* Course Detail Modal */}
       {selectedCourse && (
@@ -350,7 +268,7 @@ const Courses = () => {
                 ✕
               </button>
             </div>
-            
+
             <div className="p-8">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
@@ -360,12 +278,8 @@ const Courses = () => {
                   <p className="text-gray-600 mb-6">
                     {selectedCourse.description}
                   </p>
-                  
+
                   <div className="space-y-4 mb-6">
-                    <div className="flex items-center">
-                      <span className="font-semibold mr-2">Instructor:</span>
-                      <span>{selectedCourse.instructor}</span>
-                    </div>
                     <div className="flex items-center">
                       <span className="font-semibold mr-2">Duration:</span>
                       <span>{selectedCourse.duration}</span>
@@ -411,20 +325,13 @@ const Courses = () => {
                         </span>
                       </div>
                     </div>
-                    
+
+                    {/* ✅ PDF Button inside modal */}
                     <button
-                      onClick={() => {
-                        addToCart(selectedCourse);
-                        closeModal();
-                      }}
-                      disabled={cart.find(item => item.id === selectedCourse.id)}
-                      className={`w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 mb-3 ${
-                        cart.find(item => item.id === selectedCourse.id)
-                          ? 'bg-green-100 text-green-700 cursor-not-allowed'
-                          : 'bg-blue-600 hover:bg-blue-700 text-white'
-                      }`}
+                      onClick={() => window.open(selectedCourse.pdf, "_blank")}
+                      className="w-full py-3 px-4 rounded-xl font-semibold transition-all duration-200 mb-3 bg-blue-600 hover:bg-blue-700 text-white"
                     >
-                      {cart.find(item => item.id === selectedCourse.id) ? 'Added to Cart' : 'Add to Cart'}
+                      Roadmap Here
                     </button>
                   </div>
 
@@ -451,4 +358,3 @@ const Courses = () => {
 };
 
 export default Courses;
-
