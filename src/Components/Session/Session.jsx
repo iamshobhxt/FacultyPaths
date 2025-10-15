@@ -28,7 +28,7 @@ function Session() {
     {
       id: 3,
       title: "Advanced JavaScript",
-      date: "2025-10-12",
+      date: "2025-10-30",
       time: "11:00 AM",
       duration: "3 hours",
       status: "upcoming",
@@ -39,7 +39,7 @@ function Session() {
     {
       id: 4,
       title: "Node.js Backend Development",
-      date: "2025-10-15",
+      date: "2025-10-25",
       time: "2:00 PM",
       duration: "2.5 hours",
       status: "upcoming",
