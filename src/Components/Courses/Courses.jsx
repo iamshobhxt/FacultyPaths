@@ -25,11 +25,10 @@ const Courses = () => {
         "24/7 community support"
       ],
       curriculum: [
-        "HTML & CSS Fundamentals",
-        "JavaScript ES6+",
-        "React & Redux",
-        "Node.js & Express",
-        "MongoDB & Database Design"
+        "Placement Challenges",
+        "Skills Gaps in the Industry",
+        "Supporting Data",
+        "The Opportunity"
       ],
       pdf: "/management-placement.pdf"
     },
