@@ -27,25 +27,25 @@ function Session() {
     },
     {
       id: 3,
-      title: "Advanced JavaScript",
-      date: "2025-10-30",
-      time: "11:00 AM",
-      duration: "3 hours",
+      title: "Career Launchpad 2025 – Student Registration",
+      date: "2025-10-25",
+      time: " After 05:00 PM",
+      duration: "1 hour",
       status: "upcoming",
       participants: 15,
-      description: "Async/await, Promises aur advanced concepts",
-      formLink: "https://forms.gle/DKfBwDmvuNLJEaVv6" 
+      description: "Register now to secure your seat in the 4-hour Career Launchpad seminar and get placement-ready before Diwali!",
+      formLink: "https://forms.gle/fK28vNdPEKNAYoG96" 
     },
     {
       id: 4,
-      title: "Node.js Backend Development",
-      date: "2025-10-25",
-      time: "2:00 PM",
+      title: "Career Launchpad 2025 – College/School Partnership",
+      date: " Depend on",
+      time: "Not fixed",
       duration: "2.5 hours",
       status: "upcoming",
-      participants: 12,
-      description: "Express, MongoDB aur REST API development",
-      formLink: "https://forms.gle/DKfBwDmvuNLJEaVv6" 
+      participants: 50,
+      description: "Register now to secure your seat in the 4-hour Career Launchpad seminar and get placement-ready before Diwali!",
+      formLink: "https://forms.gle/5XtjSEmqXZVhL8wC9" 
     },
   ]);
 
