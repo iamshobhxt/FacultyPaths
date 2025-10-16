@@ -269,7 +269,7 @@ const ServicesSection = () => {
           </div>
         </div>
         
-        <ViewAllServicesButton />
+        {/* <ViewAllServicesButton /> */}
       </div>
       
       <style jsx>{`
