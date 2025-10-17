@@ -278,37 +278,7 @@ const ContactForm = () => {
             * Required fields. We'll get back to you within 24 hours.
           </p>
 
-          <div style={{height: '2.5rem'}}></div>
-
-          {/* Company Info Card */}
-          <div className="mb-2 flex justify-center">
-            <div className="group relative w-full max-w-md overflow-hidden rounded-2xl border border-blue-400/30 bg-white/10 p-6 text-center shadow-2xl backdrop-blur-md">
-              <div className="absolute -inset-1 z-0 rounded-2xl bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 opacity-60 blur-lg transition-all duration-700 group-hover:opacity-90 animate-pulse" 
-                   style={{pointerEvents: 'none', animationDuration: '3s'}}></div>
-              <div className="group/icon relative z-10 mb-3 flex justify-center">
-                <svg className="h-14 w-14 text-cyan-200 drop-shadow-lg transition-transform duration-500 group-hover/icon:scale-110 group-hover/icon:text-blue-300" 
-                     fill="none" stroke="currentColor" strokeWidth="2.2" viewBox="0 0 24 24">
-                  <rect x="3" y="5" width="18" height="14" rx="4" fill="url(#chatGradient)"></rect>
-                  <path d="M7 10h10M7 14h6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                  <ellipse cx="19" cy="19" rx="2" ry="2" fill="url(#chatGradient)" className="animate-pulse" style={{animationDuration: '2s'}}></ellipse>
-                  <defs>
-                    <linearGradient id="chatGradient" x1="3" y1="5" x2="21" y2="19" gradientUnits="userSpaceOnUse">
-                      <stop stopColor="#67e8f9"></stop>
-                      <stop offset="1" stopColor="#a78bfa"></stop>
-                    </linearGradient>
-                  </defs>
-                </svg>
-              </div>
-              <h3 className="relative z-10 mb-2 bg-gradient-to-r from-cyan-200 via-blue-100 to-purple-200 bg-clip-text text-lg leading-tight font-extrabold tracking-tight text-transparent md:text-2xl" 
-                  style={{fontFamily: 'Exo, Arial, sans-serif'}}>
-                We design. We build. We scale.
-              </h3>
-              <p className="relative z-10 text-base font-medium text-blue-100 md:text-lg" 
-                 style={{fontFamily: 'Exo, Arial, sans-serif'}}>
-                Custom IT solutions for your vision.
-              </p>
-            </div>
-          </div>
+          <div style={{height: '2.5rem'}}></div>          
         </div>
       </div>
     </div>
