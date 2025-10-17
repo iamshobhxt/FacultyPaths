@@ -6,18 +6,19 @@ const clientsData = [
   { name: 'Accenture', domain: 'accenture.com' },
   { name: 'HCL TECH', domain: 'hcltech.com' },
   { name: 'Tech Mahindra', domain: 'techmahindra.com' },
-  { name: 'Prodesk IT', domain: 'prodesk.com' },
+  { name: 'Prodesk IT', domain: 'prodeskit.com' },
   { name: 'Embrizon', domain: 'embrizon.com' },
   { name: 'InternsForge', domain: 'internforge.in' },
-  { name: 'INTERNS TECH', domain: 'INTRNSTECH.com' },
-  { name: 'DigiTech Juction', domain: 'DIGITECHJUCTION.com' },
+  { name: 'INTERNS TECH', domain: 'internstech.com' },
+  { name: 'DigiTech Juction', domain: 'vndigitech.com' },
   { name: 'Rama University', domain: 'ramauniversity.ac.in' },
   { name: 'Signa', domain: 'Signa.com' },
-  { name: 'Maharishi University', domain: 'maharishi.com' },
+  { name: 'Maharishi University', domain: 'muitonline.com' },
   { name: 'Microsoft', domain: 'microsoft.com' },
   { name: 'Accenture', domain: 'accenture.com' },
   { name: 'HCL TECH', domain: 'hcltech.com' },
   { name: 'Tech Mahindra', domain: 'techmahindra.com' }, 
+
 ];
 
 // Individual Client Card Component
