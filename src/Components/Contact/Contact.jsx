@@ -358,7 +358,7 @@ const ContactInfo = () => {
         </svg>
       ),
       title: 'Email',
-      content: <p className="text-purple-200">facultypaths.info</p>,
+      content: <p className="text-purple-200">director@facultypaths.info</p>,
       gradient: 'bg-gradient-to-r from-purple-500 to-purple-600',
       hoverShadow: 'group-hover:shadow-purple-500/25'
     },
