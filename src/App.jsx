@@ -1,6 +1,6 @@
 import React from 'react'
 import ServicesSection from './Components/Home/ServicesSection'
-import TechnologyStack from './Components/Home/TechnologyStack'
+// import TechnologyStack from './Components/Home/TechnologyStack'
 import IndustriesSection from './Components/Home/IndustriesSection'
 import ClientsSection from './Components/Home/ClientsSection'
 import ClientSection from './Components/Home/ClientSection'
@@ -14,7 +14,7 @@ function App() {
     <>
      <HomeSection/>
      <ServicesSection/>
-     <TechnologyStack/>
+     {/* <TechnologyStack/> */}
      <IndustriesSection/>
      <ClientsSection/>
      <ClientSection/>
