@@ -140,7 +140,7 @@ function ContactSection() {
               <ContactInfo
                 icon={Mail}
                 title="Email Us"
-                detail="facultypaths.info"
+                detail="director@facultypaths.info"
               />
               <ContactInfo
                 icon={MapPin}
