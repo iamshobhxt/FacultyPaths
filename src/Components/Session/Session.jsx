@@ -17,7 +17,7 @@ function Session() {
     {
       id: 2,
       title: "React Fundamentals",
-      date: "2025-11-20",
+      date: "2025-10-20",
       time: "3:00 PM",
       duration: "2.5 hours",
       status: "completed",
