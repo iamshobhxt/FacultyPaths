@@ -17,7 +17,7 @@ function Session() {
     {
       id: 2,
       title: "React Fundamentals",
-      date: "2025-10-08",
+      date: "2025-11-20",
       time: "3:00 PM",
       duration: "2.5 hours",
       status: "completed",
@@ -28,7 +28,7 @@ function Session() {
     {
       id: 3,
       title: "Career Launchpad 2025 – Student Registration",
-      date: "2025-10-25",
+      date: "2025-11-10",
       time: " After 05:00 PM",
       duration: "1 hour",
       status: "upcoming",
